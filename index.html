@@ -1,205 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenLeaf Organics</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Nunito Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            background-color: #8FBC8F;
-            color: white;
-            padding: 1rem 0;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 1rem;
-        }
-        #hero {
-            position: relative;
-            background-image: url('https://th.bing.com/th/id/OIG3.q8b_.8MP_4NwIFAjy.uA?pid=ImgGn');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 10rem 0;
-        }
-        #hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        .hero-content h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .content-section {
-            padding: 4rem 0;
-        }
-        .content-section h2 {
-            color: #2E8B57;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .product-item {
-            text-align: center;
-            position: relative;
-        }
-        .product-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-        .product-item .overlay-text {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            text-align: center;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
-        #map {
-            height: 300px;
-            margin-top: 2rem;
-        }
-        footer {
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 1rem 0;
-            border-top: 1px solid #ddd;
-        }
-        .snowflakes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 100;
-        }
-        .snowflake {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
-            opacity: 0.7;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            to {
-                transform: translateY(100vh);
-            }
-        }
-        .carousel {
-            width: 60%;
-            margin: 20px auto;
-            overflow: hidden;
-            position: relative;
-        }
-        .carousel-slide {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        #facebook-feed {
-            text-align: center;
-            margin-top: 20px;
-        }
-        #youtube-embed{
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLeaf Organics - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>GreenLeaf Organics</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#products">Products</a>
-                <a href="#location">Location</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Fresh, Local, Organic</h2>
-            <p>Bringing the best of organic produce to Hyderabad families.</p>
-        </div>
-    </section>
-    <section id="about" class="content-section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>GreenLeaf Organics is dedicated to providing Hyderabad families with the highest quality organic and locally sourced products. We believe in sustainable practices and supporting local farmers, ensuring your family enjoys the freshest and healthiest food.</p>
-            <div id="youtube-embed">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/HC52RrASIak?si=8A06tNdJLJlEw6vn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-    <section id="products" class="content-section">
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="https://th.bing.com/th/id/OIG4.nYdGv188TCQTNDhuiX5W?pid=ImgGn" alt="Organic Produce">
-                    <div class="overlay-text">Fresh Produce</div>
-                </div>
-                <div class="carousel">
-                    <div class="carousel-slide">
-                        <img src="https://th.bing.com/th/id/OIG3.8mid478vdl5SklKLj8HQ?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Carousel 1">
-                        <img src="https://th.bing.com/th/id/OIG3.bHSX013yxbMviwXoK70W?pid=ImgGn" alt="Carousel 2">
-                        <img src="https://th.bing.com/th/id/OIG3.UOFDsXjZ78LD7rn_cZJl?pid=ImgGn" alt="Carousel 3">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="location" class="content-section">
-        <div class="container">
-            <h2>Location & Hours</h2>
-            <p>123, ISB Road, Gachibowli, Hyderabad, TG 500111</p>
-            <p>Hours: Monday-Saturday, 9 AM - 7 PM; Sunday, 10 AM - 5 PM</p>
-            <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7613.051905355919!2d78.33622694161177!3d17.434522969829594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb939dae6eb775%3A0x1f7a5db82bcfdfe1!2sIndian%20School%20of%20Business%2C%20ISB%20Rd%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500111!5e0!3m2!1sen!2sin!4v1741601615175!5m2!1sen!2sin" width="100%"
+    <header>
+        <div class="container">
+            <h1>GreenLeaf Organics</h1>
+            <nav>
+                <a href="index.html">Homepage</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Fresh, Local, Organic</h2>
+            <p>Bringing the best of organic produce to Hyderabad families.</p>
+            <a href="products.html" class="cta-button">Explore Our Products</a>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <h2>Why Choose GreenLeaf Organics?</h2>
+            <p>We're committed to providing the freshest, most nutritious organic produce. Our focus is on sustainable farming and supporting local communities.</p>
+            <ul>
+                <li>Locally sourced produce</li>
+                <li>Certified organic products</li>
+                <li>Sustainable and ethical practices</li>
+                <li>Direct support to local farmers</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GreenLeaf Organics</p>
+        </div>
+    </footer>
+</body>
+</html>
